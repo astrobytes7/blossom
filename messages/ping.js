@@ -30,7 +30,7 @@ module.exports = {
         const container = new ContainerBuilder()
             .setAccentColor(0xff66c4)
             .addTextDisplayComponents(
-                new TextDisplayBuilder().setContent('###p<:ping:1502443236894048356> **Pong!**')
+                new TextDisplayBuilder().setContent('### <:ping:1502443236894048356> **Pong!**')
             )
             .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(
