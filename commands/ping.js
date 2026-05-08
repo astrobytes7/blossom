@@ -37,7 +37,7 @@ module.exports = {
             )
             .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(
-                    `**Roundtrip Latency:** \`${latency}ms\`\n**Websocket Ping:** \`${Math.round(client.ws.ping)}ms\`\n**Database Status:** \`${dbStatus}\`\n**Database Ping:** \`${dbPing}\``
+                    `**Roundtrip Latency:** ${latency}ms\n**Websocket Ping:** ${Math.round(client.ws.ping)}ms\n**Database Status:** ${dbStatus}\n**Database Ping:** ${dbPing}`
                 )
             );
 
