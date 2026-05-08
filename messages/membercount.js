@@ -9,7 +9,7 @@ const {
 } = require('discord.js');
 
 module.exports = {
-  name: 'membercount',
+  name: 'mc',
   description: 'Sends information on total membercount, online members and server boosts.',
   aliases: ['mc', 'members'],
   async execute(message, args, client) {
