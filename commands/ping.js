@@ -33,10 +33,7 @@ module.exports = {
         const container = new ContainerBuilder()
             .setAccentColor(0xff66c4)
             .addTextDisplayComponents(
-                new TextDisplayBuilder().setContent('<:ping:1502443236894048356> **Pong!**')
-            )
-            .addSeparatorComponents(
-                new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+                new TextDisplayBuilder().setContent('### <:ping:1502443236894048356> **Pong!**')
             )
             .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(
