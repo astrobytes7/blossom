@@ -1,0 +1,27 @@
+{
+  "name": "secret-dev-template-10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astrobytes7/blossom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astrobytes7/blossom/issues"
+  },
+  "homepage": "https://github.com/astrobytes7/blossom#readme",
+  "description": "",
+  "dependencies": {
+    "@discordjs/builders": "^1.14.1",
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2",
+    "mongoose": "^9.6.1"
+  }
+}
