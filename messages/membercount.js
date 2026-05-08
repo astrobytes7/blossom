@@ -26,9 +26,6 @@ module.exports = {
     const container = new ContainerBuilder()
       .setAccentColor(0xff66c4)
       .addTextDisplayComponents(
-        new TextDisplayBuilder().setContent('### **Membercount**')
-      )
-      .addTextDisplayComponents(
         new TextDisplayBuilder().setContent(
           `**Total Members:** \`${totalMembers}\`\n**Online Members:** \`${onlineMembers}\`\n**Server Boosts:** \`${boostCount}\``
         )
