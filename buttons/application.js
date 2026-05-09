@@ -16,11 +16,11 @@ module.exports = {
             .setTitle('Designer Application')
             .setLabelComponents(
                 new LabelBuilder()
-                    .setLabel('Design Specialties (Select all that apply)')
+                    .setLabel('Select your design specialties.')
                     .setStringSelectMenuComponent(
                         new StringSelectMenuBuilder()
                             .setCustomId('app_specialty')
-                            .setPlaceholder('Select your specialties...')
+                            .setPlaceholder('Choose all that apply')
                             .setMinValues(1) // Allows multiple choice
                             .setMaxValues(7) // Maximum number of options
                             .addOptions(
