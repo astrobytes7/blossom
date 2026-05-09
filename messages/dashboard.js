@@ -27,7 +27,7 @@ module.exports = {
 
     // --- Component Definitions ---
 
-    const Text = new TextDisplayBuilder().setContent('## Server Dashboard\nWelcome to <:blossom:1502473272501997678> **Blossom Customs**, where we create designs that bloom. We are dedicated to developing high-quality products tailored to your needs, while keeping our services affordable for everyone.')
+    const Text = new TextDisplayBuilder().setContent('Welcome to <:blossom:1502473272501997678> **Blossom Customs**, where we create designs that bloom. We are dedicated to developing high-quality products tailored to your needs, while keeping our services affordable for everyone.')
 
     const media = new MediaGalleryBuilder()
       .addItems([
