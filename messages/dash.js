@@ -23,7 +23,7 @@ module.exports = {
 
         const components = [
             new ContainerBuilder()
-                // Top Media Gallery (Blossom Customs Dashboard)
+                // Top Media Gallery
                 .addMediaGalleryComponents(
                     new MediaGalleryBuilder().addItems(
                         new MediaGalleryItemBuilder().setURL(
@@ -31,24 +31,14 @@ module.exports = {
                         )
                     )
                 )
-                // Separator before text
-                .addSeparatorComponents(
-                    new SeparatorBuilder()
-                        .setDivider(false)
-                        .setSpacing(SeparatorSpacingSize.Small)
-                )
-                // Main Content Text
+                .addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small))
+                // Main Content
                 .addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(
                         "Welcome to <:BlossomLogo:1326224460839391338> **Blossom Customs**, where we create designs that bloom. We are dedicated to developing high-quality products tailored to your needs, while keeping our services affordable for everyone."
                     )
                 )
-                // Separator after text
-                .addSeparatorComponents(
-                    new SeparatorBuilder()
-                        .setDivider(false)
-                        .setSpacing(SeparatorSpacingSize.Small)
-                )
+                .addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small))
                 // Buttons Section
                 .addSectionComponents(
                     new SectionBuilder()
@@ -80,25 +70,25 @@ module.exports = {
                                 .setEmoji("1502464553919975494")
                         )
                 )
-                // Select Menu Section
+                // Select Menu Section - FIXED METHOD HERE
                 .addSectionComponents(
                     new SectionBuilder()
-                        .setSelectMenuAccessory(
+                        .addSelectMenuComponents( // Replaced setSelectMenuAccessory
                             new StringSelectMenuBuilder()
                                 .setCustomId("p_300055418153996294")
                                 .setPlaceholder("Navigate")
                                 .addOptions([
-                                    { label: "Option 1", value: "opt_1" } // Added placeholder option as JSON options were empty
+                                    {
+                                        label: "Information",
+                                        description: "General info about Blossom",
+                                        value: "info_opt",
+                                        emoji: "ℹ️"
+                                    }
                                 ])
                         )
                 )
-                // Separator before footer
-                .addSeparatorComponents(
-                    new SeparatorBuilder()
-                        .setDivider(false)
-                        .setSpacing(SeparatorSpacingSize.Small)
-                )
-                // Bottom Media Gallery (Blossom Customs footer)
+                .addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small))
+                // Footer Media Gallery
                 .addMediaGalleryComponents(
                     new MediaGalleryBuilder().addItems(
                         new MediaGalleryItemBuilder().setURL(
