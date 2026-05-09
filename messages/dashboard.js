@@ -102,7 +102,7 @@ module.exports = {
 
       // Add the Button Row
       .addActionRowComponents(buttonRow)
-
+      .addActionRowComponents(selectMenuRow)
       // Add the final separator and footer media
       .addSeparatorComponents(seperator)
       .addMediaGalleryComponents(media2);
