@@ -16,16 +16,21 @@ module.exports = {
             .setTitle('Designer Application')
             .setLabelComponents(
                 new LabelBuilder()
-                    .setLabel('What is your main specialty?')
+                    .setLabel('Design Specialties (Select all that apply)')
                     .setStringSelectMenuComponent(
                         new StringSelectMenuBuilder()
                             .setCustomId('app_specialty')
-                            .setPlaceholder('Select your primary skill...')
+                            .setPlaceholder('Select your specialties...')
+                            .setMinValues(1) // Allows multiple choice
+                            .setMaxValues(7) // Maximum number of options
                             .addOptions(
-                                new StringSelectMenuOptionBuilder().setLabel('Graphics').setValue('graphics'),
-                                new StringSelectMenuOptionBuilder().setLabel('Uniforms').setValue('uniforms'),
                                 new StringSelectMenuOptionBuilder().setLabel('Liveries').setValue('liveries'),
-                                new StringSelectMenuOptionBuilder().setLabel('Discord').setValue('discord')
+                                new StringSelectMenuOptionBuilder().setLabel('Clothing').setValue('clothing'),
+                                new StringSelectMenuOptionBuilder().setLabel('Discord').setValue('discord'),
+                                new StringSelectMenuOptionBuilder().setLabel('Graphics').setValue('graphics'),
+                                new StringSelectMenuOptionBuilder().setLabel('Photography').setValue('photography'),
+                                new StringSelectMenuOptionBuilder().setLabel('ELS').setValue('els'),
+                                new StringSelectMenuOptionBuilder().setLabel('Other').setValue('other')
                             )
                     ),
                 // Question 1: Why?

@@ -51,7 +51,7 @@ module.exports = {
     const apps = new ButtonBuilder()
       .setLabel('Designer Application')
       .setStyle(ButtonStyle.Secondary)
-      .setEmoji('<:person:1502464553919975494>')
+      .setEmoji('<:roblox:1502464380594556948>')
       .setCustomId('application')
 
     const regs = new ButtonBuilder()
