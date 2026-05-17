@@ -24,9 +24,9 @@ module.exports = {
 
       const guild = interaction.guild;
       const opener = interaction.user;
-      const supportRoleId = '1502446440050589696'; // Support role ID
-      const ticketCategoryId = '1502474946780074044'; // Ticket category ID
-      const channelName = `support-${opener.username}`;
+      const supportRoleId = '1320685222685310997'; // Support role ID
+      const ticketCategoryId = '1320997288897675296'; // Ticket category ID
+      const channelName = `🔴-${opener.username}`;
 
       const ticketChannel = await guild.channels.create({
         name: channelName,
@@ -75,10 +75,15 @@ module.exports = {
         .setCustomId('closeHelp')
         .setStyle(ButtonStyle.Danger);
 
+      const escalateButton = new ButtonBuilder()
+        .setLabel('Escalate')
+        .setCustomId('escalateHelp')
+        .setStyle(ButtonStyle.Secondary);
+
       const row = new ActionRowBuilder().addComponents(claimButton, closeButton);
 
       await ticketChannel.send({
-        content: `<@${opener.id}> | <@here>`,
+        content: `-# ||<@${opener.id}> @here ||`,
         embeds: [imageEmbed, helpEmbed],
         components: [row]
       });
@@ -96,7 +101,7 @@ module.exports = {
       });
 
       // Use editReply since we deferred
-      await interaction.editReply({ content: `<:CoastalCoreGraident:1465072459752673402> Your ticket has been successfully created - <#${ticketChannel.id}>` });
+      await interaction.editReply({ content: `<:BlossomLogo:1326224460839391338> Your ticket has been successfully created - <#${ticketChannel.id}>` });
 
     } catch (error) {
       console.error('Error creating ticket from modal:', error);

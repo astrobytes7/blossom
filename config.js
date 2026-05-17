@@ -2,8 +2,11 @@ require('dotenv').config();
 
 module.exports = {
     TOKEN: process.env.TOKEN,
-    APP_ID: "1502139583557533857",
-    MONGOURL: "mongodb+srv://notastrobytes_db_user:king@blossom.qggzx8i.mongodb.net/",
-    GUILD_ID: "1502137646946848902",
+    DOCK_API: process.env.DOCK_API,
+    COOKIE_API: process.env.COOKIE_API,
+    APP_ID: process.env.APP_ID,
+    MONGOURL: process.env.MONGOURL,
+    GUILD_ID: process.env.GUILD_ID,
     prefix: "-"
 };
+

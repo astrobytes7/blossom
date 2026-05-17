@@ -17,8 +17,8 @@ module.exports = {
   cooldown: 5,
   async execute(message) {
     // Deletes the command message
-    await message.delete()
-    const requiredRoleId = "1502446440050589696";
+    await message.delete().catch(() => { });
+    const requiredRoleId = "1332954707676762203";
 
     // Security Check
     if (!message.member.roles.cache.has(requiredRoleId)) {
@@ -44,7 +44,7 @@ module.exports = {
     // Button Definition
     const button = new ButtonBuilder()
       .setLabel('Support')
-      .setEmoji('<:Support2:1482767691252240444>')
+      .setEmoji('1502473272501997678')
       .setStyle(ButtonStyle.Danger)
       .setCustomId('dashboardHelp')
 

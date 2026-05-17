@@ -22,11 +22,11 @@ require('./utils/EventLoader.js')(client);
 require('./utils/RegisterCommands.js')(client);
 
 (async function () {
-    if (!client.config.mongoURL) {
+    if (!client.config.MONGOURL) {
         console.warn('Skipping database connection');
         return;
     }
-    await mongoose.connect(client.config.mongoURL);
+    await mongoose.connect(client.config.MONGOURL);
     console.log('I have connected to the database succesfully');
 })();
 
@@ -60,7 +60,9 @@ client.on('messageCreate', async (message) => {
         await command.execute(message, args, client);
     } catch (error) {
         console.error(error);
-        message.reply(`There was an error running this command:\n\`\`\`${error.message || error}\`\`\``);
+        message.reply(`There was an error running this command:\n\`\`\`${error.message || error}\`\`\``).catch(() => {
+            message.channel.send(`There was an error running this command:\n\`\`\`${error.message || error}\`\`\``).catch(() => {});
+        });
     }
 });
 

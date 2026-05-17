@@ -1,4 +1,5 @@
-const fetch = require('node-fetch');
+// Using global fetch (Node.js 18+)
+
 const BLOXLINK_API_KEY = "201340f1-a0ce-4094-b164-008e3b1d78db";
 
 async function getRobloxAccount(guildId, userId) {
